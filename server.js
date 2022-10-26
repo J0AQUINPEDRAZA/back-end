@@ -65,7 +65,7 @@ app.get("/productoRandom", async(req,res)=>{
 
 
 app.get("/",(req,res)=>{
-    res.send(`Bienvenido al server!`)
+    res.send(`Bienvenido al server!!`)
 })
 
 
