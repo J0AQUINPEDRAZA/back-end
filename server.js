@@ -1,4 +1,3 @@
-
 const express = require("express");
 
 
@@ -27,27 +26,14 @@ class Contenedor {
         } 
                
     }
-  async getRandom(){
-        const fs = require('fs');
-        const ruta = this.fileName;
-        try {
-            const archivo = await fs.promises.readFile(ruta, 'utf-8');
-            const productos = JSON.parse(archivo);
-            return productos[numero];
-            
-        } catch (error) {
-            console.log('Se ha producido un error en getAll()', 'error numero: ', error);
-        } 
-               
-    }
   
   }
 
 const getRandomInt = (max) => {
-  return Math.floor(Math.random() * max);
+  return 
 }
 
-let numero = getRandomInt(4);
+let numero = getRandomInt(5);
 
 
 
@@ -59,13 +45,14 @@ app.get("/productos", async(req,res)=>{
 
 app.get("/productoRandom", async(req,res)=>{
     const contenedorProductos = new Contenedor("productos.txt");
-    const allProducts = await contenedorProductos.getRandom()
-    res.send(allProducts)
+    const allProducts = await contenedorProductos.getAll()
+    const numRandom = Math.floor(Math.random() * (allProducts.length));
+    const productoRandom = allProducts[numRandom]
+    res.send(productoRandom)
 })
 
-
 app.get("/",(req,res)=>{
-    res.send(`Bienvenido al server!!`)
+    res.send(`Bienvenido al server!`)
 })
 
 
