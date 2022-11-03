@@ -19,7 +19,7 @@ app.listen(port, () =>
 );
 app.get("/", (req, res) => {
     res.send(
-        "<h1 style='color:blue;'>Welcome to one of the biggest e-commerce around US</h1>"
+        "<h1 style='color:blue;'>Bienvenido a mi server</h1>"
     );
 });
 app.get("/formulario", (req, res) => {
@@ -30,7 +30,7 @@ app.post("/formulario", (req, res) => {
     const { body } = req;
     console.log(body);
     contenedor.save(body);
-    res.send("Thank you for sharing your data!");
+    res.send("tu producto a sido añadido correctamente ve a:( /api/productos ) para corroborar");
 });
 
 routerProducts.get("", async (req, res) => {
@@ -44,7 +44,7 @@ routerProducts.get("/:id", async (req, res) => {
     const product = await contenedor.getById(id);
     if (id > products.length) {
         res.json({
-            error: "This product was not found",
+            error: "Este producto no se encuentra",
             productList: products,
         });
     } else {
@@ -58,14 +58,14 @@ routerProducts.delete("/:id", async (req, res) => {
 
     if (id > products.length) {
         res.json({
-            error: "This product was not found",
+            error: "Este producto no se encuentra",
             productList: products,
         });
     } else {
         await contenedor.deleteById(id);
         res.json({
             success: true,
-            msg: "This product was deleted successfully.",
+            msg: "este producto a sido borrado correctamente",
         });
     }
 });
