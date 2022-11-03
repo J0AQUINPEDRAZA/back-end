@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Tijera",
+    "price": 25,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+    "id": 2
+  },
+  {
+    "product": "iPhone 14",
+    "price": "1300",
+    "thumbnail": "https://cbafederal.net/wp-content/uploads/2022/09/Apple-iPhone-14-iPhone-14-Plus-2up-blue-220907-geo_inline.jpg.large_.jpg",
+    "id": 3
+  },
+  {
+    "title": "asas",
+    "price": "1212",
+    "thumbnail": "https://i.ibb.co/r6jmjvJ/icons8-menu-24.png",
+    "id": 6
+  }
+]
